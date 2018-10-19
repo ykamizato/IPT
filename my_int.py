@@ -4,8 +4,11 @@
 # In[1]:
 
 
+# このファイルの内容を別のところでモジュールとして使うために.pyファイルに変換したファイルを作成。
+
 import subprocess
-subprocess.run(['jupyter', 'nbconvert', '--to', 'python', '数値積分.ipynb'])
+subprocess.run(['jupyter', 'nbconvert', '--to', 'python', '数値積分.ipynb']) 
+subprocess.run(['mv', '数値積分.py', 'my_int.py'])                           # 「my_int.py」にリネーム。
 
 
 # # 数値積分
@@ -180,7 +183,7 @@ print('y_cの積分誤差：', integrate.simps(y_c_array,x) - 0)
 # 
 # 
 
-# ## 誤差の一般論
+# ## 誤差
 # 
 # 台形則を用いた積分近似(2)式の誤差はおよそ
 # 
